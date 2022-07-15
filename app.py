@@ -21,7 +21,7 @@ web_app.router.add_static('/js/', path='js', name='js')
 
 async def index(request):
     dirname = os.path.dirname(os.path.realpath(__file__))
-    filename = os.path.join(dirname, 'mypass.html')
+    filename = os.path.join(dirname, 'index.html')
     with open(filename, encoding="utf-8") as file_obj:
         return web.Response(text=file_obj.read(), content_type='text/html')
 
